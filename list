@@ -1,0 +1,15 @@
+from tkinter import*
+root = Tk()
+root.title("My Favourite Dish")
+root.geometry("200x500")
+label = Label(root,text="Dishes")
+label.pack(pady=30)
+#listbox
+listbox=Listbox(root,height=10,width=30,bg="red",fg="blue")
+listbox.insert(1,"mouse")
+listbox.insert(2,"keyboard")
+listbox.insert(3,"chicken")
+listbox.insert(4,"glasses")
+listbox.insert(5,"fries")
+listbox.pack()
+root.mainloop()
