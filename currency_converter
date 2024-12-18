@@ -1,0 +1,22 @@
+from tkinter import *
+root = Tk()
+root.geometry("400x200")
+root.title("Currency Converter App")
+def from_Rs():
+    rupees = float(user_input.get())/80
+    t1.delete("1.0",END)
+    t1.insert(END,rupees)
+
+l1= Label(root,text="enter currency in Rs",bg="cyan",fg="purple")
+l2 = Label(root,text="Dollars",bg="orange",fg="yellow",font=("Arial",10,"bold"))
+user_input_value = StringVar()
+user_input=Entry(root,textvariable=user_input_value)
+t1 = Text(root,height = 2,width=20)
+button = Button(root,text="Rs to Ds converter",command=from_Rs)
+l1.grid(row=0,column=0)
+l2.grid(row=1,column=0)
+user_input.grid (row=0,column=1)
+t1.grid(row=1,column=1)
+button.grid(row=3,column=0)
+
+root.mainloop()
